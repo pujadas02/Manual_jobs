@@ -23,8 +23,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Job 1 step
-        run: echo "Running Job 1. Custom Input: ${{ github.event.inputs.custom_input }}"
-
+        run: echo "Running Job 1. Custom Input:${{ github.event.inputs.custom_input }}"
   job2:
     if: ${{ github.event.inputs.job_to_run == 'job2' }}
     runs-on: ubuntu-latest
@@ -33,7 +32,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Job 2 step
-        run: echo "Running Job 2. Custom Input: ${{ github.event.inputs.custom_input }}"
+        run: echo "Running Job 2. Custom Input:${{ github.event.inputs.custom_input }}"
 
   job3:
     if: ${{ github.event.inputs.job_to_run == 'job3' }}
@@ -43,4 +42,4 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Job 3 step
-        run: echo "Running Job 3. Custom Input: ${{ github.event.inputs.custom_input }}"
+        run: echo "Running Job 3. Custom Input:${{ github.event.inputs.custom_input }}"
